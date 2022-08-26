@@ -35,7 +35,7 @@ export const goCheckoutThunk = () => (dispatch) => {
     dispatch(setIsLoading(true));
     return axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/purchases', {}, getConfig())
         .then(() => dispatch(setCart([])))
-        .then(() => dispatch(setPurchases(res.data)))
+        // .then(() => dispatch(setPurchases(res.data)))
         .finally(() => dispatch(setIsLoading(false)));
 }
 

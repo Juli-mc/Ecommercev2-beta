@@ -17,9 +17,15 @@ const Purchases = () => {
             <h1>Purchases</h1>
             {purchases.map(purchases=>(
                 <Card border="primary" style={{ width: '18rem' }}>
-                <Card.Header></Card.Header>
+                <Card.Header>{purchases.Title}</Card.Header>
                 <Card.Body>
-                    <Card.Title>{purchases.Title}</Card.Title>
+                    <Card.Title>{purchases.createdAt}</Card.Title>
+                    {purchases.cart.products.map(product => (
+                        <div>{product.title}
+                        <br />
+                        Quantity: {product.productsInCart.quantity}
+                        </div>
+                    ))}
                     <Card.Text>
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.

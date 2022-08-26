@@ -41,7 +41,7 @@ const PourchasesSidebar = ({ show, handleClose, handleShow, token }) => {
                                         <Card.Link><i class="fa-solid fa-cart-plus"></i></Card.Link>
                                         <Card.Link><i class="fa-solid fa-cart-arrow-down"></i></Card.Link>
                                         <br />
-                                        {cartProducts.price} $
+                                        {cartProducts.price * cartProducts.productsInCart.quantity} $ - x{cartProducts.productsInCart.quantity}
                                     </Card.Body>
                                 </Card>
                             ))}
